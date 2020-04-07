@@ -20,6 +20,7 @@ namespace FlappyBlazorBird.Client.Data
             InitializePlayer();
             Universe.Players.Add(this);
             Universe.TotalSessions++;
+            Name = "unnamed";
         }
         public int score = 0;
         public int playerIndex = 0;

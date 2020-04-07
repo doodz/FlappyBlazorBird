@@ -8,7 +8,14 @@
         <div class="game-div">
             @foreach (var printable in ToRender)
             {
-                <div id="@printable.Key" @key="printable.Key" class="@printable.CssClass" style="@printable.CssStyle" draggable="false" dragstart="false;"> </div>
+                <div 
+                    id="@printable.Key" 
+                    @key="printable.Key" 
+                    class="@printable.CssClass" 
+                    style="@printable.CssStyle" 
+                    draggable="false" 
+                    dragstart="false;">
+                </div>
             }                
             <div class="statistics">
                 <ul>
@@ -17,6 +24,9 @@
                     <li>since @(Statistics.startedAt)</li>
                     <li>Record @(Statistics.maxScore)</li>
                 </ul>
+            </div>
+            <div class="nickname">
+                <input type="text" @bind="@MyBird.Name" @bind:event="oninput" maxlength="12"/>
             </div>
         </div>
         <div class="left-div"></div>
